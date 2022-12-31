@@ -39,5 +39,3 @@ const Login = () => {
 };
 
 export default Login;
-
-sss;
