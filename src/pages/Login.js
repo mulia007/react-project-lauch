@@ -22,7 +22,10 @@ const Login = () => {
 
     axios
       .post(API.LOGIN, payload)
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        localStorage.setItem("token", res.data.access_token);
+      })
       .catch((err) => console.log(err.message));
   };
 
