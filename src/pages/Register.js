@@ -30,8 +30,8 @@ const Register = () => {
 
   return (
     <div className="regis-wrapper">
+      <Navbar />
       <div className="regis-container">
-        <Navbar />
         <h1>Register Admin</h1>
         <input onChange={handleEmail} placeholder="Email" />
         <input onChange={handlePassword} placeholder="Password" />
