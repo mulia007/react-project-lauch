@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 import { API } from "../const/endpoint";
 import "./page.css";
 
@@ -32,6 +33,7 @@ const Login = () => {
   return (
     <div className="regis-wrapper">
       <div className="regis-container">
+        <Navbar />
         <h1>Login Admin</h1>
         <input onChange={handleEmail} placeholder="Email" />
         <input onChange={handlePassword} placeholder="Password" />
