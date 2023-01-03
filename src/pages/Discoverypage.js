@@ -6,7 +6,7 @@ const Discoverypage = () => {
     <div>
       <Navbar />
       <h1>this is Discovery</h1>
-      <h2>ya</h2>
+      <h2>discovery menu</h2>
     </div>
   );
 };
