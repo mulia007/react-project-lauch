@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Discoverypage from "./pages/Discoverypage";
+import ProtectedRoute from "./hoc/ProtectedRoute";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/discover" element={<Discoverypage />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/discover" element={<Discoverypage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
