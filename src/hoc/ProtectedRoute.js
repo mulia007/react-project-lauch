@@ -18,7 +18,7 @@ const ProtectedRoute = () => {
   }, isLogin);
 
   if (loading) {
-    return "loadinggg";
+    return "loadinggg page";
   }
 
   return isLogin ? <Outlet /> : <Navigate to="/login" />;
