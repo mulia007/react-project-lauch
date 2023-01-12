@@ -16,6 +16,12 @@ const Navbar = () => {
       <p>
         <Link to={"/register"}>Register</Link>
       </p>
+      <p>
+        <Link to={"/register"}>Register</Link>
+      </p>
+      <p>
+        <Link to={"/register"}>Discoverypage</Link>
+      </p>
     </div>
   );
 };
