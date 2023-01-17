@@ -1,27 +1,28 @@
 import { useEffect, useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
+import Login from "../pages/Login";
 
-const ProtectedRoute = () => {
-  const [isLogin, setIsLogin] = useState(false);
-  const [loading, setLoading] = useState(true);
+const ProtectedRoute = (props) => {
+  const [login, setLogin] = useState(false);
+  const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
+    setIsLoading(true);
     const token = localStorage.getItem("token");
     if (!token) {
-      setIsLogin(false);
-      setLoading(false);
+      setLogin(false);
+      setIsLoading(false);
     } else {
-      setIsLogin(true);
-      setLoading(false);
+      setLogin(true);
+      setIsLoading(false);
     }
-  }, isLogin);
+  }, [login]);
 
-  if (loading) {
-    return "loadinggg";
+  if (isloading) {
+    return "...Checking Auth...";
   }
-
-  return isLogin ? <Outlet /> : <Navigate to="/login" />;
+  if (!login) return <Navigate to="/login" />;
+  return props.children;
 };
 
 export default ProtectedRoute;
