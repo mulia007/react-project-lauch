@@ -15,7 +15,7 @@ const ProtectedRoute = () => {
       setIsLogin(true);
       setLoading(false);
     }
-  }, isLogin);
+  }, [isLogin]);
 
   if (loading) {
     return "loadinggg page";
